@@ -1,0 +1,33 @@
+Tue Feb 20 16:22:47 IST 2018 : Apache Derby Network Server - 10.11.1.2 - (1629631) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+Tue Feb 20 16:22:53 IST 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): instance a816c00e-0161-b2d8-2cd7-ffffbe074e44 
+on database directory F:\NIIT project\GNIIT-Project\SABC with class loader sun.misc.Launcher$AppClassLoader@1d44bcfa 
+Loaded from file:/C:/Program%20Files/Java/jdk1.8.0_91/db/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_91-b14
+user.dir=C:\Program Files\Java\jdk1.8.0_91\db
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=F:\NIIT project\GNIIT-Project
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Tue Feb 20 16:23:17 IST 2018:
+Shutting down instance a816c00e-0161-b2d8-2cd7-ffffbe074e44 on database directory F:\NIIT project\GNIIT-Project\SABC with class loader sun.misc.Launcher$AppClassLoader@1d44bcfa 
+Tue Feb 20 16:23:18 IST 2018 Thread[DRDAConnThread_3,5,main] (DATABASE = SABC), (DRDAID = {2}), Database 'SABC' shutdown.
+----------------------------------------------------------------
+Tue Feb 20 16:23:52 IST 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): instance a65c80ac-0161-b2d8-2cd7-ffffbe074e44 
+on database directory F:\NIIT project\GNIIT-Project\SABC with class loader sun.misc.Launcher$AppClassLoader@1d44bcfa 
+Loaded from file:/C:/Program%20Files/Java/jdk1.8.0_91/db/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_91-b14
+user.dir=C:\Program Files\Java\jdk1.8.0_91\db
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=F:\NIIT project\GNIIT-Project
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Tue Feb 20 16:46:52 IST 2018: Shutting down Derby engine
