@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.smartservice.sabc.DAO;
+package com.smartservices.sabc.DAO;
 
 import com.smartservices.sabc.entities.Carinfo;
 import java.util.List;
@@ -14,11 +14,11 @@ import java.util.List;
  */
 public interface CarDAO {
     
-     List<Carinfo> findAll();
-    List<Carinfo> findById(int carid);
-    List<Carinfo> findByModel(Carinfo model);
-    boolean insertCarinfo(Carinfo Carinfo);
-    boolean updateCarinfo(Carinfo Carinfo);
-    boolean deleteCarinfo(Carinfo Carinfo);
-
+      int addCar(Carinfo Carinfo);
+    int deleteCar(int carId);
+    List<Carinfo> getAllCar();
+   Carinfo getCustomerByID(int carId);
+    int updateCar(int carId,Carinfo Carinfo);
+  
+    
 }

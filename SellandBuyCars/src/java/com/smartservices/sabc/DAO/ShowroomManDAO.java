@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.smartservice.sabc.DAO;
+package com.smartservices.sabc.DAO;
 
 import com.smartservices.sabc.entities.Showroomman;
 import java.util.List;
@@ -13,13 +13,13 @@ import java.util.List;
  * @author Prince
  */
 public interface ShowroomManDAO {
+     
     
-     List<Showroomman> findAll();
-    List<Showroomman> findById(int srmid);
-    List<Showroomman> findByName(Showroomman srmfname);
-    boolean insertShowrooman(Showroomman Showroomman);
-    boolean updateShowroomman(Showroomman Showroomman);
-    boolean deleteShowroomman(Showroomman Showroomman);
-
+    int addShowroomman(Showroomman Showroomman);
+    int deleteShowroomman(int srmid);
+    List<Showroomman> getAllShowroomman();
+    Showroomman getShowroommanByID(int srmid);
+    int updateShowroomman(int srmid,Showroomman Showroomman);
+  
     
 }

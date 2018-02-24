@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.smartservice.sabc.DAO;
+package com.smartservices.sabc.DAO;
 
 import com.smartservices.sabc.entities.Custinfo;
 import java.util.List;
@@ -14,14 +14,13 @@ import java.util.List;
  */
 public interface CustomerDAO {
     
+    int addCustomer(Custinfo Custinfo);
+    int deleteCustomer(int Cust_id);
+    List<Custinfo> getAllCustinfo();
+    Custinfo getCustomerByID(int cust_id);
+    int updateCustomer(int cust_id,Custinfo Custinfo);
+  
     
-
-    List<Custinfo> findAll();
-    List<Custinfo> findById(int custid);
-    List<Custinfo> findByName(Custinfo custfname);
-    boolean insertCustinfo(Custinfo custinfo);
-    boolean updateCustinfo(Custinfo custinfo);
-    boolean deleteCustinfo(Custinfo custinfo);
 
 }
     
