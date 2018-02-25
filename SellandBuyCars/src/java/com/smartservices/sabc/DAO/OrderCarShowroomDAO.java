@@ -5,10 +5,21 @@
  */
 package com.smartservices.sabc.DAO;
 
+import com.smartservices.sabc.entities.Ordercaronshowroom;
+import java.util.List;
+
 /**
  *
  * @author Prince
  */
 public interface OrderCarShowroomDAO {
+    
+    
+    int addOrderCarShowroom(Ordercaronshowroom Ordercaronshowroom);
+    int deleteOrderCarShowroom(int ocsrid);
+    List<Ordercaronshowroom> getAllOrderCarShowroom();
+    Ordercaronshowroom getOrderCarShowroomByID(int ocsrid);
+    int updateOrderCarShowroom(int ocsrid,Ordercaronshowroom Ordercaronshowroom);
+    
     
 }

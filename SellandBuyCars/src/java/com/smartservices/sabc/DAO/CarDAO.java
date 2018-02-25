@@ -14,7 +14,7 @@ import java.util.List;
  */
 public interface CarDAO {
     
-      int addCar(Carinfo Carinfo);
+    int addCar(Carinfo Carinfo);
     int deleteCar(int carId);
     List<Carinfo> getAllCar();
    Carinfo getCustomerByID(int carId);

@@ -5,10 +5,20 @@
  */
 package com.smartservices.sabc.DAO;
 
+import com.smartservices.sabc.entities.Testdrivecarshowroom;
+import java.util.List;
+
 /**
  *
  * @author Prince
  */
 public interface TestDriveCarShowroomDAO {
+    
+    int addTestDriveCarShowroom(Testdrivecarshowroom Testdrivecarshowroom);
+    int deleteTestDriveCarShowroom(int tdcsrid);
+    List<Testdrivecarshowroom> getAllTestDriveCarShowroom();
+    Testdrivecarshowroom getTestDriveCarShowroomByID(int tdcsrid);
+    int updateTestDriveCarShowroom(int tdcsrid,Testdrivecarshowroom Testdrivecarshowroom);
+    
     
 }

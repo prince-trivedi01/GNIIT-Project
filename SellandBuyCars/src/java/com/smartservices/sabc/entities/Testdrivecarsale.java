@@ -32,7 +32,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Testdrivecarsale.findAll", query = "SELECT t FROM Testdrivecarsale t")
-    , @NamedQuery(name = "Testdrivecarsale.findByTdcsrId", query = "SELECT t FROM Testdrivecarsale t WHERE t.tdcsrId = :tdcsrId")
+    , @NamedQuery(name = "Testdrivecarsale.findByTdcsaId", query = "SELECT t FROM Testdrivecarsale t WHERE t.tdcsaId = :tdcsaId")
     , @NamedQuery(name = "Testdrivecarsale.findByDate", query = "SELECT t FROM Testdrivecarsale t WHERE t.date = :date")
     , @NamedQuery(name = "Testdrivecarsale.findByJobprofile", query = "SELECT t FROM Testdrivecarsale t WHERE t.jobprofile = :jobprofile")
     , @NamedQuery(name = "Testdrivecarsale.findByStatus", query = "SELECT t FROM Testdrivecarsale t WHERE t.status = :status")})
@@ -42,8 +42,8 @@ public class Testdrivecarsale implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "TDCSR_ID")
-    private Integer tdcsrId;
+    @Column(name = "TDCSA_ID")
+    private Integer tdcsaId;
     @Column(name = "DATE")
     @Temporal(TemporalType.TIMESTAMP)
     private Date date;
@@ -63,16 +63,16 @@ public class Testdrivecarsale implements Serializable {
     public Testdrivecarsale() {
     }
 
-    public Testdrivecarsale(Integer tdcsrId) {
-        this.tdcsrId = tdcsrId;
+    public Testdrivecarsale(Integer tdcsaId) {
+        this.tdcsaId = tdcsaId;
     }
 
-    public Integer getTdcsrId() {
-        return tdcsrId;
+    public Integer getTdcsaId() {
+        return tdcsaId;
     }
 
-    public void setTdcsrId(Integer tdcsrId) {
-        this.tdcsrId = tdcsrId;
+    public void setTdcsaId(Integer tdcsaId) {
+        this.tdcsaId = tdcsaId;
     }
 
     public Date getDate() {
@@ -118,7 +118,7 @@ public class Testdrivecarsale implements Serializable {
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (tdcsrId != null ? tdcsrId.hashCode() : 0);
+        hash += (tdcsaId != null ? tdcsaId.hashCode() : 0);
         return hash;
     }
 
@@ -129,7 +129,7 @@ public class Testdrivecarsale implements Serializable {
             return false;
         }
         Testdrivecarsale other = (Testdrivecarsale) object;
-        if ((this.tdcsrId == null && other.tdcsrId != null) || (this.tdcsrId != null && !this.tdcsrId.equals(other.tdcsrId))) {
+        if ((this.tdcsaId == null && other.tdcsaId != null) || (this.tdcsaId != null && !this.tdcsaId.equals(other.tdcsaId))) {
             return false;
         }
         return true;
@@ -137,7 +137,7 @@ public class Testdrivecarsale implements Serializable {
 
     @Override
     public String toString() {
-        return "com.smartservices.sabc.entities.Testdrivecarsale[ tdcsrId=" + tdcsrId + " ]";
+        return "com.smartservices.sabc.entities.Testdrivecarsale[ tdcsaId=" + tdcsaId + " ]";
     }
     
 }

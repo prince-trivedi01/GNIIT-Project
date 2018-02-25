@@ -15,10 +15,10 @@ import java.util.List;
 public interface CustomerDAO {
     
     int addCustomer(Custinfo Custinfo);
-    int deleteCustomer(int Cust_id);
+    int deleteCustomer(int custId);
     List<Custinfo> getAllCustinfo();
-    Custinfo getCustomerByID(int cust_id);
-    int updateCustomer(int cust_id,Custinfo Custinfo);
+    Custinfo getCustomerByID(int custId);
+    int updateCustomer(int custId,Custinfo Custinfo);
   
     
 
