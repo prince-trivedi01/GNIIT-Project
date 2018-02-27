@@ -17,7 +17,7 @@ public interface CarDAO {
     int addCar(Carinfo Carinfo);
     int deleteCar(int carId);
     List<Carinfo> getAllCar();
-   Carinfo getCustomerByID(int carId);
+   Carinfo getCarByID(int carId);
     int updateCar(int carId,Carinfo Carinfo);
   
     

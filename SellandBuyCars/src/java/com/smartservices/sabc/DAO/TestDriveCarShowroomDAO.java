@@ -15,10 +15,10 @@ import java.util.List;
 public interface TestDriveCarShowroomDAO {
     
     int addTestDriveCarShowroom(Testdrivecarshowroom Testdrivecarshowroom);
-    int deleteTestDriveCarShowroom(int tdcsrid);
+    int deleteTestDriveCarShowroom(int tdcsrId);
     List<Testdrivecarshowroom> getAllTestDriveCarShowroom();
-    Testdrivecarshowroom getTestDriveCarShowroomByID(int tdcsrid);
-    int updateTestDriveCarShowroom(int tdcsrid,Testdrivecarshowroom Testdrivecarshowroom);
+    Testdrivecarshowroom getTestDriveCarShowroomByID(int tdcsrId);
+    int updateTestDriveCarShowroom(int tdcsrId,Testdrivecarshowroom Testdrivecarshowroom);
     
     
 }

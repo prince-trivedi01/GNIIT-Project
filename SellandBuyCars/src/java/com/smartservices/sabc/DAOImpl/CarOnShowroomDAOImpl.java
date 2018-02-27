@@ -21,7 +21,7 @@ public class CarOnShowroomDAOImpl implements CarOnShowroomDAO{
     }
 
     @Override
-    public int deleteCarOnShowroom(int cosrid) {
+    public int deleteCarOnShowroom(int cosrId) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -31,12 +31,12 @@ public class CarOnShowroomDAOImpl implements CarOnShowroomDAO{
     }
 
     @Override
-    public Caronshowroom getCarOnShowroomByID(int cosrid) {
+    public Caronshowroom getCarOnShowroomByID(int cosrId) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public int updateCarOnShowroom(int cosrid, Caronshowroom Caronsshowroom) {
+    public int updateCarOnShowroom(int cosrId, Caronshowroom Caronsshowroom) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

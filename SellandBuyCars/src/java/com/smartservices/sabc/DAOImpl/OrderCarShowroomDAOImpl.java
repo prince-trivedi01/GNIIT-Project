@@ -21,7 +21,7 @@ public class OrderCarShowroomDAOImpl implements OrderCarShowroomDAO{
     }
 
     @Override
-    public int deleteOrderCarShowroom(int ocsrid) {
+    public int deleteOrderCarShowroom(int ocsrId) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -31,12 +31,12 @@ public class OrderCarShowroomDAOImpl implements OrderCarShowroomDAO{
     }
 
     @Override
-    public Ordercaronshowroom getOrderCarShowroomByID(int ocsrid) {
+    public Ordercaronshowroom getOrderCarShowroomByID(int ocsrId) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public int updateOrderCarShowroom(int ocsrid, Ordercaronshowroom Ordercaronshowroom) {
+    public int updateOrderCarShowroom(int ocsrId, Ordercaronshowroom Ordercaronshowroom) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

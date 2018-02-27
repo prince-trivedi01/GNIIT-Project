@@ -15,10 +15,10 @@ import java.util.List;
 public interface CarOnSaleDAO {
     
     int addCarOnSale(Caronsale Caronsale);
-    int deleteCarOnSale(int cosaid);
+    int deleteCarOnSale(int cosaId);
     List<Caronsale> getAllCarOnSale();
-    Caronsale getCarOnSaleByID(int cosaid);
-    int updateCarOnSale(int cosaid,Caronsale Caronsale);
+    Caronsale getCarOnSaleByID(int cosaId);
+    int updateCarOnSale(int cosaId,Caronsale Caronsale);
     
     
 }

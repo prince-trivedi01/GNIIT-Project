@@ -18,10 +18,10 @@ public interface OrderCarSaleDAO {
    
     
     int addOrderCarSale(Ordercaronsale Ordercaronsale);
-    int deleteOrderCarSale(int ocsaid);
+    int deleteOrderCarSale(int ocsaId);
     List<Ordercaronsale> getAllOrderCarSale();
-    Ordercaronsale getOrderCarSaleByID(int ocsaid);
-    int updateOrderCarSale(int ocsaid,Ordercaronsale Ordercaronsale);
+    Ordercaronsale getOrderCarSaleByID(int ocsaId);
+    int updateOrderCarSale(int ocsaId,Ordercaronsale Ordercaronsale);
     
     
     

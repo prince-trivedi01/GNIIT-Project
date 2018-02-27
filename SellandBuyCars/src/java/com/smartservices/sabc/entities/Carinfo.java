@@ -63,7 +63,7 @@ public class Carinfo implements Serializable {
     @OneToMany(mappedBy = "carId")
     private Collection<Caronsale> caronsaleCollection;
 
-    public Carinfo() {
+    public Carinfo(int carId, String Model,String Name,String Type,int Amount) {
     }
 
     public Carinfo(Integer carId) {

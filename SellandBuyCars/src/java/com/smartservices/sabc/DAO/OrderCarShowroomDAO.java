@@ -16,10 +16,10 @@ public interface OrderCarShowroomDAO {
     
     
     int addOrderCarShowroom(Ordercaronshowroom Ordercaronshowroom);
-    int deleteOrderCarShowroom(int ocsrid);
+    int deleteOrderCarShowroom(int ocsrId);
     List<Ordercaronshowroom> getAllOrderCarShowroom();
-    Ordercaronshowroom getOrderCarShowroomByID(int ocsrid);
-    int updateOrderCarShowroom(int ocsrid,Ordercaronshowroom Ordercaronshowroom);
+    Ordercaronshowroom getOrderCarShowroomByID(int ocsrId);
+    int updateOrderCarShowroom(int ocsrId,Ordercaronshowroom Ordercaronshowroom);
     
     
 }
