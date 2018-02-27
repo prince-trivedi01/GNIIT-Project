@@ -80,7 +80,7 @@ public class Custinfo implements Serializable {
     @OneToMany(mappedBy = "custId")
     private Collection<Caronsale> caronsaleCollection;
 
-    public Custinfo() {
+    public Custinfo(int custId,String fname,String lname,String addr,int mob,String email,String username,String password) {
     }
 
     public Custinfo(Integer custId) {

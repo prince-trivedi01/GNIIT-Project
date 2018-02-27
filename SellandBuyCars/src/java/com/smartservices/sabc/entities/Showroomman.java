@@ -83,7 +83,7 @@ public class Showroomman implements Serializable {
     @OneToMany(mappedBy = "srmId")
     private Collection<Caronsale> caronsaleCollection;
 
-    public Showroomman() {
+    public Showroomman(int srmtId,String fname,String lname,int mob,Date dateofbirth,String email,String username,String password) {
     }
 
     public Showroomman(Integer srmId) {
