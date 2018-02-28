@@ -75,7 +75,8 @@ public class Caronsale implements Serializable {
     @ManyToOne
     private Showroomman srmId;
 
-    public Caronsale() {
+    public Caronsale(int cosaId,String model,String name,String regno,String milage,String condition,String status,int amount) {
+        
     }
 
     public Caronsale(Integer cosaId) {

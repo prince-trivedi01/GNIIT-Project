@@ -28,7 +28,7 @@ public class CarDAOImpl implements CarDAO {
         try {
             
             Connection con = DBConnection.getConnection();
-            PreparedStatement ps = con.prepareStatement("Insert into Carinfo values (?,?,?,?)");
+            PreparedStatement ps = con.prepareStatement("Insert into Carinfo (model,name,type) values (?,?,?,?)");
                     ps.setString(1,Carinfo.getModel());
                     ps.setString(2,Carinfo.getName());
                     ps.setString(3,Carinfo.getType());

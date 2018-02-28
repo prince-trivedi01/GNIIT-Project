@@ -67,7 +67,7 @@ public class Caronshowroom implements Serializable {
     @ManyToOne
     private Showroomman srmId;
 
-    public Caronshowroom() {
+    public Caronshowroom(int cosrId,String model,String name,String type,String color,int amount) {
     }
 
     public Caronshowroom(Integer cosrId) {
@@ -160,10 +160,7 @@ public class Caronshowroom implements Serializable {
             return false;
         }
         Caronshowroom other = (Caronshowroom) object;
-        if ((this.cosrId == null && other.cosrId != null) || (this.cosrId != null && !this.cosrId.equals(other.cosrId))) {
-            return false;
-        }
-        return true;
+        return !((this.cosrId == null && other.cosrId != null) || (this.cosrId != null && !this.cosrId.equals(other.cosrId)));
     }
 
     @Override
