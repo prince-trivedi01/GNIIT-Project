@@ -47,7 +47,7 @@ public class CustomerDAOImpl implements CustomerDAO {
         int count=0;
         try {
             Connection con = DBConnection.getConnection();
-            PreparedStatement ps = con.prepareStatement("delete from Custinfo where custId=?");
+            PreparedStatement ps = con.prepareStatement("delete from Custinfo where cust_Id=?");
             ps.setInt(1,custId);
             count=ps.executeUpdate();
         } catch (SQLException ex) {
@@ -64,7 +64,7 @@ public class CustomerDAOImpl implements CustomerDAO {
             Connection con = DBConnection.getConnection();
             PreparedStatement ps = con.prepareStatement("select * from Custinfo");
             ResultSet resultSet = ps.executeQuery();
-            CustList = new ArrayList<Custinfo>();
+            CustList = new ArrayList<>();
              if(resultSet!=null){
                 //resultSet.first();
                 while(resultSet.next()){
@@ -99,10 +99,10 @@ public class CustomerDAOImpl implements CustomerDAO {
     
         try { 
             Connection con = DBConnection.getConnection();
-            PreparedStatement ps = con.prepareStatement("select * from Custinfo where custId=?");
+            PreparedStatement ps = con.prepareStatement("select * from Custinfo where cust_Id=?");
             ps.setInt(1, custId);
             ResultSet resultSet = ps.executeQuery();
-            CustList = new ArrayList<Custinfo>();
+            CustList = new ArrayList<>();
              if(resultSet!=null){
                 //resultSet.first();
                 while(resultSet.next()){
@@ -137,7 +137,7 @@ public class CustomerDAOImpl implements CustomerDAO {
         int count=0;
         try {
             Connection con = DBConnection.getConnection();
-            PreparedStatement ps = con.prepareStatement("Update Custinfo set fname=?,lname=?,addr=?,mob=?,email=?,username=?,password=? where custId=?");
+            PreparedStatement ps = con.prepareStatement("Update Custinfo set fname=?,lname=?,addr=?,mob=?,email=?,username=?,password=? where cust_Id=?");
             ps.setString(1,Custinfo.getFname());
             ps.setString(2,Custinfo.getLname());
             ps.setString(3,Custinfo.getAddr());

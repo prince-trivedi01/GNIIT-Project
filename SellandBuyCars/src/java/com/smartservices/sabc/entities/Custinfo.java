@@ -81,7 +81,30 @@ public class Custinfo implements Serializable {
     private Collection<Caronsale> caronsaleCollection;
 
     public Custinfo(int custId,String fname,String lname,String addr,int mob,String email,String username,String password) {
+    this.custId=custId;
+    this.fname=fname;
+    this.lname=lname;
+    this.addr=addr;
+    this.mob=mob;
+    this.email=email;
+    this.username=username;
+    this.password=password;
     }
+    
+    
+    public Custinfo(String fname,String lname,String addr,int mob,String email,String username,String password) {
+   
+    this.fname=fname;
+    this.lname=lname;
+    this.mob=mob;
+    this.email=email;
+    this.username=username;
+    this.password=password;
+    }
+    
+    
+    
+    
 
     public Custinfo(Integer custId) {
         this.custId = custId;

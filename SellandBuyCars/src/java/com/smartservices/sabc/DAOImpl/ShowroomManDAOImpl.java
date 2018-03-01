@@ -48,7 +48,7 @@ public class ShowroomManDAOImpl implements ShowroomManDAO{
         int count=0;
         try {
             Connection con = DBConnection.getConnection();
-            PreparedStatement ps = con.prepareStatement("delete from Showroomman where srmId=?");
+            PreparedStatement ps = con.prepareStatement("delete from Showroomman where srm_Id=?");
             ps.setInt(1,srmId);
             count=ps.executeUpdate();
         } catch (SQLException ex) {
@@ -64,7 +64,7 @@ public class ShowroomManDAOImpl implements ShowroomManDAO{
             Connection con = DBConnection.getConnection();
             PreparedStatement ps = con.prepareStatement("select * from Showroomman");
             ResultSet resultSet = ps.executeQuery();
-            ShowManList = new ArrayList<Showroomman>();
+            ShowManList = new ArrayList<>();
              if(resultSet!=null){
                 //resultSet.first();
                 while(resultSet.next()){
@@ -95,7 +95,7 @@ public class ShowroomManDAOImpl implements ShowroomManDAO{
     List<Showroomman> ShowManList=null;
         try {
             Connection con = DBConnection.getConnection();
-            PreparedStatement ps = con.prepareStatement("select * from Showroomman where srmId=?");
+            PreparedStatement ps = con.prepareStatement("select * from Showroomman where srm_Id=?");
             ps.setInt(1, srmId);
             ResultSet resultSet = ps.executeQuery();
             ShowManList = new ArrayList<Showroomman>();
@@ -134,7 +134,7 @@ public class ShowroomManDAOImpl implements ShowroomManDAO{
     
         try {
             Connection con = DBConnection.getConnection();
-            PreparedStatement ps = con.prepareStatement("Update Showroomman set fname=?,lname=?,mob=?,dateofbirth=?,email=?,username=?,password=? where custId=?");
+            PreparedStatement ps = con.prepareStatement("Update Showroomman set fname=?,lname=?,mob=?,dateofbirth=?,email=?,username=?,password=? where srm_Id=?");
             ps.setString(1,Showroomman.getFname());
             ps.setString(2,Showroomman.getLname());
             ps.setInt(3,Showroomman.getMob());

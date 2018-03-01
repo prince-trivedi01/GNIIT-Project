@@ -28,8 +28,10 @@ public class CarDAOImpl implements CarDAO {
         try {
             
             Connection con = DBConnection.getConnection();
-            PreparedStatement ps = con.prepareStatement("Insert into Carinfo (model,name,type) values (?,?,?,?)");
+            
+            PreparedStatement ps = con.prepareStatement("Insert into Carinfo (model,name,type,amount) values (?,?,?,?)");
                     ps.setString(1,Carinfo.getModel());
+                    
                     ps.setString(2,Carinfo.getName());
                     ps.setString(3,Carinfo.getType());
                     ps.setInt(4,Carinfo.getAmount());
@@ -39,6 +41,7 @@ public class CarDAOImpl implements CarDAO {
                     
         } catch (SQLException ex) {
             Logger.getLogger(CarDAOImpl.class.getName()).log(Level.SEVERE, null, ex);
+            ///System.out.println(ex.getMessage());
         }
         return count;
     }
@@ -48,7 +51,7 @@ public class CarDAOImpl implements CarDAO {
         int count=0;
         try {
             Connection con = DBConnection.getConnection();
-            PreparedStatement ps = con.prepareStatement("delete from Carinfo where carId=?");
+            PreparedStatement ps = con.prepareStatement("delete from Carinfo where car_Id=?");
             ps.setInt(1,carId);
             count=ps.executeUpdate();
         } catch (SQLException ex) {
@@ -66,7 +69,7 @@ public class CarDAOImpl implements CarDAO {
             Connection con = DBConnection.getConnection(); 
             PreparedStatement ps = con.prepareStatement("select * from Carinfo");
             ResultSet resultSet = ps.executeQuery();
-             CarList = new ArrayList<Carinfo>();
+             CarList = new ArrayList<>();
             if(resultSet!=null){
                 //resultSet.first();
                 while(resultSet.next()){
@@ -97,10 +100,10 @@ public class CarDAOImpl implements CarDAO {
         try {
             
             Connection con = DBConnection.getConnection(); 
-            PreparedStatement ps = con.prepareStatement("select * from Carinfo where carId=?");
+            PreparedStatement ps = con.prepareStatement("select * from Carinfo where car_Id=?");
             ps.setInt(1, carId);
             ResultSet resultSet = ps.executeQuery();
-             CarList = new ArrayList<Carinfo>();
+             CarList = new ArrayList<>();
             if(resultSet!=null){
                 //resultSet.first();
                 while(resultSet.next()){
@@ -132,7 +135,7 @@ public class CarDAOImpl implements CarDAO {
        
         try {
             Connection con = DBConnection.getConnection();
-            PreparedStatement ps = con.prepareStatement("Update Carinfo set model=?,name=?,type=?,amount=? where carId=?");
+            PreparedStatement ps = con.prepareStatement("Update Carinfo set model=?,name=?,type=?,amount=? where car_Id=?");
             ps.setString(1,Carinfo.getModel());
             ps.setString(2,Carinfo.getName());
             ps.setString(3,Carinfo.getType());

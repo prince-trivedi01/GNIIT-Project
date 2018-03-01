@@ -83,7 +83,16 @@ public class Showroomman implements Serializable {
     @OneToMany(mappedBy = "srmId")
     private Collection<Caronsale> caronsaleCollection;
 
-    public Showroomman(int srmtId,String fname,String lname,int mob,Date dateofbirth,String email,String username,String password) {
+    public Showroomman(int srmId,String fname,String lname,int mob,Date dateofbirth,String email,String username,String password) {
+        this.srmId= srmId;
+        this.fname= fname;
+        this.lname= lname;
+        this.mob= mob;
+        this.dateofbirth = dateofbirth;
+        this.email = email;
+        this.username= username;
+        this.password = password;
+    
     }
 
     public Showroomman(Integer srmId) {
