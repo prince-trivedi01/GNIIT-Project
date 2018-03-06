@@ -11,7 +11,9 @@ import static com.smartservices.sabc.entities.Ordercaronshowroom_.ocsrId;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -27,9 +29,10 @@ public class OrderCarShowroomDAOImpl implements OrderCarShowroomDAO{
         int count=0;
         try {
             Connection con = DBConnection.getConnection();
-            PreparedStatement ps = con.prepareStatement("Insert into Ordercaronshowroom (amount,date,quantity,status) values (?,?,?,?)");
-            ps.setInt(1,Ordercaronshowroom.getAmount());
-            ps.setDate(2, (Date) Ordercaronshowroom.getDate());
+            PreparedStatement ps = con.prepareStatement("Insert into Ordercaronshowroom (date,amount,quantity,status) values (?,?,?,?)");
+           
+            ps.setDate(1, (Date) Ordercaronshowroom.getDate());
+             ps.setInt(2,Ordercaronshowroom.getAmount());
             ps.setInt(3,Ordercaronshowroom.getQuantity());
             ps.setString(4,Ordercaronshowroom.getStatus());
             count = ps.executeUpdate();
@@ -44,7 +47,7 @@ public class OrderCarShowroomDAOImpl implements OrderCarShowroomDAO{
        int count=0;
         try {
             Connection con = DBConnection.getConnection();
-            PreparedStatement ps = con.prepareStatement("delete from Ordercaronshowroom where ocsrId=?");
+            PreparedStatement ps = con.prepareStatement("delete from Ordercaronshowroom where ocsr_Id=?");
             ps.setInt(1,ocsrId);
             count=ps.executeUpdate();
         } catch (SQLException ex) {
@@ -55,18 +58,97 @@ public class OrderCarShowroomDAOImpl implements OrderCarShowroomDAO{
 
     @Override
     public List<Ordercaronshowroom> getAllOrderCarShowroom() {
-      throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    
+     
+         List<Ordercaronshowroom> OrdercaronshowroomList=null;
+        try {
+            Connection con = DBConnection.getConnection();
+            PreparedStatement ps = con.prepareStatement("select * from Ordercaronshowroom");
+            ResultSet resultSet = ps.executeQuery();
+           OrdercaronshowroomList = new ArrayList<>();
+             if(resultSet!=null){
+                //resultSet.first();
+                while(resultSet.next()){
+                    int ocsrId=resultSet.getInt(1);
+                    int amount = resultSet.getInt(2);
+                   
+                    int quantity = resultSet.getInt(4);
+                     Date date = resultSet.getDate(5);
+                   
+                    String status= resultSet.getString(7);
+                   
+                    Ordercaronshowroom Ordercaronshowroom = new Ordercaronshowroom(ocsrId,date,amount,quantity,status);
+                   OrdercaronshowroomList.add(Ordercaronshowroom);
+            
+                }
+            }  
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(OrderCarSaleDAOImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    return OrdercaronshowroomList;
+        
+        
+        
+        
     }
 
     @Override
     public Ordercaronshowroom getOrderCarShowroomByID(int ocsrId) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       
+         List<Ordercaronshowroom> OrdercaronshowroomList=null;
+        try {
+            Connection con = DBConnection.getConnection();
+            PreparedStatement ps = con.prepareStatement("select * from Ordercaronshowroom where ocsr_Id=?");
+            ps.setInt(1, ocsrId);
+            ResultSet resultSet = ps.executeQuery();
+            
+           OrdercaronshowroomList = new ArrayList<>();
+             if(resultSet!=null){
+                //resultSet.first();
+                while(resultSet.next()){
+                   // int ocsrId=resultSet.getInt(1);
+                    int amount = resultSet.getInt(2);
+                   
+                    int quantity = resultSet.getInt(4);
+                     Date date = resultSet.getDate(5);
+                   
+                    String status= resultSet.getString(7);
+                    
+                    Ordercaronshowroom Ordercaronshowroom = new Ordercaronshowroom(date,amount,quantity,status);
+                   OrdercaronshowroomList.add(Ordercaronshowroom);
+            
+                }
+            }  
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(OrderCarSaleDAOImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
+          if(OrdercaronshowroomList.size()>0) return OrdercaronshowroomList.get(0);
+     else return null;
+    
+    
     }
 
     @Override
     public int updateOrderCarShowroom(int ocsrId, Ordercaronshowroom Ordercaronshowroom) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int count=0;
+        try {
+            Connection con = DBConnection.getConnection();
+            PreparedStatement ps = con.prepareStatement("Update Ordercaronshowroom set date=?,amount=?,quantity=?,status=? where ocsr_Id=?");
+          
+            ps.setDate(1, (Date) Ordercaronshowroom.getDate());
+           
+            ps.setInt(2, Ordercaronshowroom.getAmount());
+            ps.setInt(3, Ordercaronshowroom.getQuantity());
+            ps.setString(4,Ordercaronshowroom.getStatus());
+            ps.setInt(5, ocsrId);
+            
+            count = ps.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(OrderCarShowroomDAOImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    
+    return count;
     }
     
 }

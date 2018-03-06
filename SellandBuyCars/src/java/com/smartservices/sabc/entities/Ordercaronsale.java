@@ -65,7 +65,22 @@ public class Ordercaronsale implements Serializable {
     @ManyToOne
     private Showroomman srmId;
 
-    public Ordercaronsale() {
+    public Ordercaronsale(int ocsaId, Date date,int amount,int quantity,String status ) {
+   
+    this.ocsaId=ocsaId;
+    this.date=date;
+    this.amount=amount;
+    this.quantity=quantity;
+    this.status=status;
+    }
+    
+     public Ordercaronsale( Date date,int amount,int quantity,String status ) {
+   
+    //this.ocsaId=ocsaId;
+    this.date=date;
+    this.amount=amount;
+    this.quantity=quantity;
+    this.status=status;
     }
 
     public Ordercaronsale(Integer ocsaId) {

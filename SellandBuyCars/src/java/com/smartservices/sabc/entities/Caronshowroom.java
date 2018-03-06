@@ -68,7 +68,25 @@ public class Caronshowroom implements Serializable {
     private Showroomman srmId;
 
     public Caronshowroom(int cosrId,String model,String name,String type,String color,int amount) {
+   
+    this.cosrId=cosrId;
+    this.model=model;
+    this.name=name;
+    this.type=type;
+    this.color=color;
+    this.amount=amount;
     }
+    
+     public Caronshowroom(String model,String name,String type,String color,int amount) {
+   
+    
+    this.model=model;
+    this.name=name;
+    this.type=type;
+    this.color=color;
+    this.amount=amount;
+    }
+    
 
     public Caronshowroom(Integer cosrId) {
         this.cosrId = cosrId;

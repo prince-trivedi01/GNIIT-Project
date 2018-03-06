@@ -60,9 +60,21 @@ public class Testdrivecarshowroom implements Serializable {
     @ManyToOne
     private Showroomman srmId;
 
-    public Testdrivecarshowroom() {
+    public Testdrivecarshowroom(int tdcsrId , Date date , String jobprofile , String status) {
+        this.tdcsrId=tdcsrId;
+        this.date=date;
+        this.jobprofile=jobprofile;
+        this.status=status;
     }
 
+     public Testdrivecarshowroom( Date date , String jobprofile , String status ) {
+      
+        this.date=date;
+        this.jobprofile=jobprofile;
+        this.status=status;
+    }
+    
+    
     public Testdrivecarshowroom(Integer tdcsrId) {
         this.tdcsrId = tdcsrId;
     }

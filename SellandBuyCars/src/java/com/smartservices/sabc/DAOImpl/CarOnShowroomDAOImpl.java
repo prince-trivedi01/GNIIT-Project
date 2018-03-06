@@ -46,7 +46,7 @@ public class CarOnShowroomDAOImpl implements CarOnShowroomDAO{
         int count=0;
         try {
             Connection con = DBConnection.getConnection();
-            PreparedStatement ps = con.prepareStatement("delete from Caronshowroom where cosrId=?");
+            PreparedStatement ps = con.prepareStatement("delete from Caronshowroom where cosr_Id=?");
             ps.setInt(1,cosrId);
             count=ps.executeUpdate();
         } catch (SQLException ex) {
@@ -87,7 +87,7 @@ public class CarOnShowroomDAOImpl implements CarOnShowroomDAO{
          List<Caronshowroom> CaronshowroomList=null;
         try {
             Connection con = DBConnection.getConnection();
-            PreparedStatement ps = con.prepareStatement("select * from Caronshowroom where cosrId=?");
+            PreparedStatement ps = con.prepareStatement("select * from Caronshowroom where cosr_Id=?");
             ps.setInt(1, cosrId);
             ResultSet resultSet = ps.executeQuery();
             CaronshowroomList = new ArrayList<Caronshowroom>();
@@ -116,7 +116,7 @@ public class CarOnShowroomDAOImpl implements CarOnShowroomDAO{
         int count=0;
         try {
             Connection con = DBConnection.getConnection();
-            PreparedStatement ps = con.prepareStatement("Update Caronshowroom set model=?,name=?,type=?,color=?,amount=? where cosrId=?");
+            PreparedStatement ps = con.prepareStatement("Update Caronshowroom set model=?,name=?,type=?,color=?,amount=? where cosr_Id=?");
            
             ps.setInt(1,cosrId);
             ps.setString(2,Caronsshowroom.getModel());

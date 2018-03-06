@@ -110,8 +110,8 @@ public class ShowroomManDAOImpl implements ShowroomManDAO{
                     String email = resultSet.getString(6);
                     String username = resultSet.getString(7);
                     String password = resultSet.getString(8);
-                    Showroomman Customer = new Showroomman(srmId,fname,lname,mob,dateofbirth,email,username,password);
-                    ShowManList.add(Customer);
+                    Showroomman Showroomman = new Showroomman(srmId,fname,lname,mob,dateofbirth,email,username,password);
+                    ShowManList.add(Showroomman);
             
                 }
             }

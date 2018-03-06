@@ -51,7 +51,7 @@ public class CarOnSaleDAOImpl implements CarOnSaleDAO{
          int count=0;
         try {
             Connection con = DBConnection.getConnection();
-            PreparedStatement ps = con.prepareStatement("delete from Caronsale where cosaId=?");
+            PreparedStatement ps = con.prepareStatement("delete from Caronsale where cosa_Id=?");
             ps.setInt(1,cosaId);
             count=ps.executeUpdate();
         } catch (SQLException ex) {
@@ -96,7 +96,7 @@ public class CarOnSaleDAOImpl implements CarOnSaleDAO{
         List<Caronsale> CaronsaleList=null;
         try { 
             Connection con = DBConnection.getConnection();
-            PreparedStatement ps = con.prepareStatement("select * from Caronsale where cosaId=?");
+            PreparedStatement ps = con.prepareStatement("select * from Caronsale where cosa_Id=?");
             ps.setInt(1, cosaId);
             ResultSet resultSet = ps.executeQuery();
             CaronsaleList = new ArrayList<Caronsale>();
@@ -127,7 +127,7 @@ public class CarOnSaleDAOImpl implements CarOnSaleDAO{
         int count=0;
         try {
             Connection con = DBConnection.getConnection();
-            PreparedStatement ps = con.prepareStatement("Update Caronsale set model=?,name=?,regno=?,milage=?,condition=?,status=?,amount=? where cosaId=?");
+            PreparedStatement ps = con.prepareStatement("Update Caronsale set model=?,name=?,regno=?,milage=?,condition=?,status=?,amount=? where cosa_Id=?");
             ps.setString(1,Caronsale.getModel());
             ps.setString(2,Caronsale.getName());
             ps.setString(3,Caronsale.getRegno());

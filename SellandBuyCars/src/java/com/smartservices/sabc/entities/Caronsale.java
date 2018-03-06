@@ -76,8 +76,27 @@ public class Caronsale implements Serializable {
     private Showroomman srmId;
 
     public Caronsale(int cosaId,String model,String name,String regno,String milage,String condition,String status,int amount) {
-        
+        this.cosaId=cosaId;
+        this.model=model;
+        this.name=name;
+        this.regno=regno;
+        this.milage=milage;
+        this.condition=condition;
+        this.status=status;
+        this.amount=amount;
     }
+    
+     public Caronsale(String model,String name,String regno,String milage,String condition,String status,int amount) {
+        
+        this.model=model;
+        this.name=name;
+        this.regno=regno;
+        this.milage=milage;
+        this.condition=condition;
+        this.status=status;
+        this.amount=amount;
+    }
+    
 
     public Caronsale(Integer cosaId) {
         this.cosaId = cosaId;
