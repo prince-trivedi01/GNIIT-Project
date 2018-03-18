@@ -1,9 +1,11 @@
+<%-- 
+    Document   : header
+    Created on : 18 Mar, 2018, 5:43:58 PM
+    Author     : Prince
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <title>Header&Footer</title>
@@ -87,7 +89,7 @@ body {
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-          <img src="logo1.jpg" alt="logo" class="image-rounded" width="150" height="75" />  
+           
         <a class="navbar-brand" href="#">Sell & Buy Cars</a>
       </div>
       <div class="collapse navbar-collapse">
@@ -104,23 +106,12 @@ body {
             </ul>
           </li>
         </ul>
-      </div><!--/.nav-collapse -->
+      </div>
     </div>
   </div>
   
-  <!-- Begin page content -->
-  <div class="center-container">
-    
-   Hello
-  
-</div>
+ 
 
-<div id="footer">
-  <div class="container">
-    <p>&nbsp;</p>
-    <p class="lead">Sell&BuyCars@<a href="">gmail.com</a></p>
-  </div>
-  </div>
 
  </body>
 </html>
