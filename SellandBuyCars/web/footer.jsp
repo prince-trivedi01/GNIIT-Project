@@ -17,25 +17,13 @@
          <style>
              
             
-body {
-  height: 100%;
-  /* The html and body elements cannot have any padding or margin. */
-}
 
-/* Wrapper for page content to push down footer */
-#wrap {
-  min-height: 100%;
-  height: 100%;
-  /* Negative indent footer by its height */
-  margin: 0 auto -82px 0;
-  /* Pad bottom by footer height */
-  padding: 0 0 80px 0;
-}
 
 /* Set the fixed height of the footer here */
 #footer {
   height: 80px;
   background-color: #f5f5f5;
+  align-items: baseline;
 }
 
 
@@ -79,17 +67,12 @@ body {
     <body>
      
   
-  <!-- Begin page content -->
-  <div class="center-container">
-    
-   
-  
-</div>
+ 
 
 <div id="footer">
   <div class="container">
     <p>&nbsp;</p>
-    <p class="lead">Sell&BuyCars@<a href="">gmail.com</a></p>
+    <p> Copyright &copy; &nbsp; Sell and Buy Cars&REG; 2018  </p>
   </div>
   </div>
 
