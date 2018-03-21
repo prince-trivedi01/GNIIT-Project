@@ -62,7 +62,13 @@ public class ApplicationClass {
          //CustomerList.forEach((cust) -> {
            //  System.out.println(cust.getCustId()+"|"+cust.getFname()+"|"+cust.getLname()+"|"+cust.getAddr()+"|"+cust.getMob()+"|"+cust.getEmail()+"|"+cust.getUsername());
             //});
-      
+       // Custinfo cust=CustomerDAO.getCustomerByID(3002);
+        // System.out.println(cust.getCustomerId()+ "|" + cust.getFname() + "|" + cust.getLname() +"|"+ cust.getAddress() +"|"+ cust.getEmail() +"|"+ cust.getMob +"|"+cust.getUssername +"|"+cust.getPassword);
+        
+        // Custinfo cust = new Custinfo(   );
+        //int count=CustomerDAO.updateCust(  );
+        //if(count>0)System.out.println("Record Updated Successfully");
+        //  else System.out.println("Record Failed to get updated");
       
        
         }
