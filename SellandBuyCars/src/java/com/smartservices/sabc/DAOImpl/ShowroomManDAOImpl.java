@@ -33,7 +33,7 @@ public class ShowroomManDAOImpl implements ShowroomManDAO{
             ps.setString(2,Showroomman.getLname());
             ps.setInt(3,Showroomman.getMob());
             ps.setString(4,Showroomman.getEmail());
-            ps.setDate(5, (Date) Showroomman.getDateofbirth());
+            ps.setString(5, Showroomman.getDateofbirth());
             ps.setString(6,Showroomman.getUsername());
             ps.setString(7,Showroomman.getPassword());
             count = ps.executeUpdate();
@@ -72,7 +72,7 @@ public class ShowroomManDAOImpl implements ShowroomManDAO{
                     String fname = resultSet.getString(2);
                     String lname = resultSet.getString(3);
                     int mob = resultSet.getInt(4);
-                     Date dateofbirth = resultSet.getDate(5);
+                    String dateofbirth = resultSet.getString(5);
                     String email = resultSet.getString(6);
                     String username = resultSet.getString(7);
                     String password = resultSet.getString(8);
@@ -106,7 +106,7 @@ public class ShowroomManDAOImpl implements ShowroomManDAO{
                     String fname = resultSet.getString(2);
                     String lname = resultSet.getString(3);
                     int mob = resultSet.getInt(4);
-                    Date dateofbirth = resultSet.getDate(5);
+                    String dateofbirth = resultSet.getString(5);
                     String email = resultSet.getString(6);
                     String username = resultSet.getString(7);
                     String password = resultSet.getString(8);
@@ -138,7 +138,7 @@ public class ShowroomManDAOImpl implements ShowroomManDAO{
             ps.setString(1,Showroomman.getFname());
             ps.setString(2,Showroomman.getLname());
             ps.setInt(3,Showroomman.getMob());
-            ps.setDate(4, (Date) Showroomman.getDateofbirth());
+            ps.setString(4, Showroomman.getDateofbirth());
             ps.setString(5,Showroomman.getEmail());
             ps.setString(6,Showroomman.getUsername());
             ps.setString(7,Showroomman.getPassword());
@@ -150,6 +150,11 @@ public class ShowroomManDAOImpl implements ShowroomManDAO{
     
     return count;
     
+    }
+
+    @Override
+    public boolean isManagerValid(String username, String password) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

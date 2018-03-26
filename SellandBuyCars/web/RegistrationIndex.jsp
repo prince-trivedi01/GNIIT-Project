@@ -12,7 +12,7 @@
         <title>Registration Form</title>
     </head>
     <body>
-        <form method="post" action="registration.jsp">
+        <form method="post" action="registrationservlet">
             <b>Id</b>
             <input type="text" name="id" value="autoincrement" size="5">
             <br>

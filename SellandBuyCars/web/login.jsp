@@ -20,7 +20,7 @@
 
 <div class="container">
   
-  <form class="form-horizontal" action="/action_page.php">
+  <form class="form-horizontal" action="login">
     <div class="form-group">
       <label class="control-label col-sm-2" for="username">Username:</label>
       <div class="col-sm-10">

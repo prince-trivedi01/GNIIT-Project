@@ -156,5 +156,12 @@ public class CustomerDAOImpl implements CustomerDAO {
     return count;
     
      }
+
+   
+
+    @Override
+    public boolean isUserValid(String username, String password) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

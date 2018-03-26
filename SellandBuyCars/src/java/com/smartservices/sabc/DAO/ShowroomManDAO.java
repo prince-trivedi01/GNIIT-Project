@@ -20,6 +20,6 @@ public interface ShowroomManDAO {
     List<Showroomman> getAllShowroomman();
     Showroomman getShowroommanByID(int srmid);
     int updateShowroomman(int srmid,Showroomman Showroomman);
-  
+    boolean isManagerValid(String username,String password);
     
 }

@@ -63,7 +63,7 @@ public class Showroomman implements Serializable {
     private String email;
     @Column(name = "DATEOFBIRTH")
     @Temporal(TemporalType.DATE)
-    private Date dateofbirth;
+    private String dateofbirth;
     @Size(max = 15)
     @Column(name = "USERNAME")
     private String username;
@@ -83,7 +83,7 @@ public class Showroomman implements Serializable {
     @OneToMany(mappedBy = "srmId")
     private Collection<Caronsale> caronsaleCollection;
 
-    public Showroomman(int srmId,String fname,String lname,int mob,Date dateofbirth,String email,String username,String password) {
+    public Showroomman(int srmId,String fname,String lname,int mob,String dateofbirth,String email,String username,String password) {
         this.srmId= srmId;
         this.fname= fname;
         this.lname= lname;
@@ -139,11 +139,11 @@ public class Showroomman implements Serializable {
         this.email = email;
     }
 
-    public Date getDateofbirth() {
+    public String getDateofbirth() {
         return dateofbirth;
     }
 
-    public void setDateofbirth(Date dateofbirth) {
+    public void setDateofbirth(String dateofbirth) {
         this.dateofbirth = dateofbirth;
     }
 

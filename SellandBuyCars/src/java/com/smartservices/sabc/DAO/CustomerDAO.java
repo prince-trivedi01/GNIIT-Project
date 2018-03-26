@@ -19,7 +19,7 @@ public interface CustomerDAO {
     List<Custinfo> getAllCustinfo();
     Custinfo getCustomerByID(int custId);
     int updateCustomer(int custId,Custinfo Custinfo);
-  
+    boolean isUserValid(String username , String password);
     
 
 }

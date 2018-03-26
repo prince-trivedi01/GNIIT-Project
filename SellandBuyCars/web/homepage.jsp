@@ -74,7 +74,7 @@
 </div>
   
 <div class="container text-center">    
-  <h3>What We Do</h3><br>
+  <h3>We Sell and Buy Cars </h3><br>
   <div class="row">
     <div class="col-sm-4">
         <img src="img/polo.jpg" class="img-responsive" style="width:100%" alt="swift">
@@ -85,12 +85,8 @@
       <p>TATA TIAGO</p>    
     </div>
     <div class="col-sm-4">
-      <div class="well">
-       <p>Some text..</p>
-      </div>
-      <div class="well">
-       <p>Some text..</p>
-      </div>
+        <img src="img/mustang.jpg" class="img-responsive" style="width:100%" alt="car">
+      <p>Mustang</p>  
     </div>
   </div>
 </div><br>
