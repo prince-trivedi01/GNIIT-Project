@@ -35,7 +35,7 @@
       <li><a href="contact.jsp">Contact</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-        <li><a href="registration.jsp"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="RegistrationIndex.jsp"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
       <li><a href="login.jsp"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
     </ul>
   </div>
